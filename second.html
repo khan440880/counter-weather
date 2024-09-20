@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      background-color: #E5E5EA;
+      opacity: 20px; 
+      color: #333333;
+    }
+    nav{
+      height: 60px;
+      width: 100%;
+      background-color: #2196F3;
+      text-align: center;
+      line-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a{
+      text-decoration: none;
+      font-size: larger;
+      color: #FFF599;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    @media(max-width:350px){
+        nav a{
+            font-size: 15px;
+        }
+        nav{
+            gap: 20px;
+        }
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+    #city{
+        height: 30px;
+        margin: 10px;
+        border: none;
+    }
+    #submit{
+        margin: 10px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+    }
+    .res-dispay{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="index.html">Tally Counter</a>
+          <a href="index2.html">Words Counter</a>
+          <a href="second.html">Weather </a>
+     
+        </nav>
+      </header>
+    <div class="container">
+    <input id="city" type="text" placeholder="Enter city name">
+    <button id="submit">Show Weather</button>
+    </div>
+
+    <div class="res-dispay">
+        <h3 id="city-name"></h3>
+        <h3 id="country-name"></h3>
+        <h4 id="city-time"></h4>
+        <h5 id="city-temp"></h5>
+    </div>
+    <script src="second.js"></script>
+</body>
+</html>

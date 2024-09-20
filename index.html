@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter App</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      background-color: #E5E5EA;
+      opacity: 20px; 
+      color: #333333;
+    }
+    nav{
+      height: 60px;
+      width: 100%;
+      background-color: #2196F3;
+      text-align: center;
+      line-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a{
+      text-decoration: none;
+      font-size: larger;
+      color: #FFF599;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    @media(max-width:350px){
+        nav a{
+            font-size: 15px;
+        }
+        nav{
+            gap: 20px;
+        }
+    }
+.container{
+  text-align: center;
+  height: 300px;
+  line-height: 50px;
+  
+}
+.box{
+  padding: 50px;
+}
+.heading{
+  font-size: 40px;
+  font-family: monospace;
+}
+.btn{
+  height: 30px;
+  width: 120px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #8BC34A;
+}
+#count{
+  font-size: 30px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Tally Counter</a>
+      <a href="index2.html">Words Counter</a>
+      <a href="second.html">Weather </a>
+
+    </nav>
+  </header>
+  <div class="container">
+    <div class="box">
+  <h1 class="heading">Counter App</h1>
+  <div class="buttons">
+  <button class="btn" id="increment-btn">Increment</button>
+  <button class="btn" id="reset-btn">Reset</button>
+  <button class="btn" id="mode">Chode mode</button>
+  </div>
+  <div >
+  <p id="count">Count: 0</p>
+  </div>
+</div>
+  </div>
+
+  <script src="first.js"></script>
+</body>
+</html>

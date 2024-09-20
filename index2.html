@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      background-color: #E5E5EA;
+      opacity: 20px; 
+      font-family:monospace;
+      
+    }
+    nav{
+      height: 60px;
+      width: 100%;
+      background-color: #2196F3;
+      text-align: center;
+      line-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+    
+    nav a{
+      text-decoration: none;
+      font-size: larger;
+      color: #FFF599;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    @media(max-width:350px){
+        nav a{
+            font-size: 15px;
+        }
+        nav{
+            gap: 20px;
+        }
+    }
+    .content{
+        text-align: center;
+    }
+    .container{
+        height: 300px;
+        line-height: 50px;
+    }
+    .content{
+        padding: 50px;
+    }
+    .btn{
+        height: 30px;
+        width: 120px;
+        border-radius: 10px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: #8BC34A;
+    }
+    h1{
+        font-size: 40px;
+    }
+    textarea{
+        height: 150px;
+        width: 300px;
+    }
+    @media(max-width:405px){
+        textarea{
+            height: 100px;
+            width: 200px;
+        }
+    }
+    @media(max-width:303px){
+        textarea{
+            height: 80px;
+            width: 150px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="index.html">Tally Counter</a>
+          <a href="index2.html">Words Counter</a>
+          <a href="second.html">Weather </a>
+        </nav>
+      </header>
+    <div class="container">
+        <div class="content">
+            <div>
+            <h1>Characters Counter!</h1>
+        </div>
+        <div>
+            <textarea id="area"  placeholder="Enter the words or Paste here!"></textarea>
+        </div>
+        <div>
+            <button class="btn">Count</button>
+            <button class="btn" id="mode">Chode mode</button>
+        </div>
+        <div>
+            <div class="box">
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+      let area=document.querySelector("#area");
+      let resBox=document.querySelector(".box");
+      let upDate=document.querySelector(".btn");
+      let modeBtn = document.querySelector("#mode");
+      body=document.querySelector("body");
+      
+      function result(){
+      let input=area.value;
+      let chCount=input.length;
+      resBox.innerHTML=`Total number of character ${chCount}`;}
+      
+     upDate.onclick=result;
+
+     let cond1=()=>{body.style.background="#E5E5EA",body.style.color="black"}
+let cond2=()=>{body.style.background="black",body.style.color="#E5E5EA"}
+function mode(){
+    if(body.style.background==="#E5E5EA",body.style.color==="black"){
+        cond2();
+    }else{
+        cond1();
+    }
+}
+modeBtn.addEventListener("click",mode);
+     </script>
+</body>
+</html>
